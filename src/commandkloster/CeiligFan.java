@@ -10,20 +10,18 @@ package commandkloster;
  *
  * @author Alexander
  */
-public class GarageDoor {
-
-    private String door;
-    public GarageDoor(String string) {
-       door=string; 
-    }
-    public GarageDoor(){
+public class CeiligFan {
+    private String fan;
+    public CeiligFan(){
         
     }
-    public void open(){
+    public CeiligFan(String fan){
+        this.fan=fan;
+    }
+    public void on(){
         
     }
-    public void close(){
+    public void off(){
         
     }
-    
 }

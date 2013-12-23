@@ -6,23 +6,21 @@
 
 package commandkloster;
 
+import bsuir.mycommand.Command;
+
 /**
  *
  * @author Alexander
  */
-public class GarageDoor {
-
-    private String door;
-    public GarageDoor(String string) {
-       door=string; 
+public class StereoOffCommand implements Command{
+    Stereo stereo;
+    
+    public StereoOffCommand( Stereo stereo){
+        this.stereo=stereo;
     }
-    public GarageDoor(){
-        
-    }
-    public void open(){
-        
-    }
-    public void close(){
+    @Override
+    public void execute() {
+        stereo.off();
         
     }
     

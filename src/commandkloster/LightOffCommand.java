@@ -6,24 +6,20 @@
 
 package commandkloster;
 
+import bsuir.mycommand.Command;
+
 /**
  *
  * @author Alexander
  */
-public class GarageDoor {
+public class LightOffCommand implements Command {
+    Light light;
 
-    private String door;
-    public GarageDoor(String string) {
-       door=string; 
+    public LightOffCommand(Light light){
+        this.light=light;
     }
-    public GarageDoor(){
-        
+    @Override
+    public void execute() {
+        light.off();
     }
-    public void open(){
-        
-    }
-    public void close(){
-        
-    }
-    
 }
