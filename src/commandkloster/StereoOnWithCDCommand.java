@@ -24,5 +24,10 @@ public class StereoOnWithCDCommand implements Command{
         stereo.setCD();
         stereo.setVolume(11);
     }
+
+    @Override
+    public void undo() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

@@ -22,4 +22,10 @@ public class LightOffCommand implements Command {
     public void execute() {
         light.off();
     }
+
+    @Override
+    public void undo() {
+        light.on();
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

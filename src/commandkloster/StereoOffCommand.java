@@ -23,5 +23,10 @@ public class StereoOffCommand implements Command{
         stereo.off();
         
     }
+
+    @Override
+    public void undo() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

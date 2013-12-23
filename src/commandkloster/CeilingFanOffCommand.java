@@ -21,4 +21,9 @@ public class CeilingFanOffCommand implements Command{
     public void execute() {
         ceilingFan.off();
     }
+
+    @Override
+    public void undo() {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
