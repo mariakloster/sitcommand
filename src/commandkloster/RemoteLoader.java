@@ -65,5 +65,12 @@ public class RemoteLoader {
         remoteControl.undoButtonWasPushed();
         //remoteControl.offButtonWasPushed(3);
         
-    }
+        Light light=new Light("Living room");
+        TV tv=new TV("Living room");
+        Stereo stereo1 = new Stereo("Living room");
+        Hottub hottub=new Hottub();
+        LightOnCommand light1On = new LightOnCommand(light);
+        StereoOnWithCDCommand stereo1On=new StereoOnWithCDCommand(stereo1);
+        HottubOnCommand hottubOn = new HottubOnCommand(hottub);
+    }   
 }
