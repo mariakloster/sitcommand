@@ -6,6 +6,8 @@
 
 package commandkloster;
 
+import bsuir.mycommand.Command;
+
 /**
  *
  * @author Alexander
@@ -72,5 +74,25 @@ public class RemoteLoader {
         LightOnCommand light1On = new LightOnCommand(light);
         StereoOnWithCDCommand stereo1On=new StereoOnWithCDCommand(stereo1);
         HottubOnCommand hottubOn = new HottubOnCommand(hottub);
+        LightOffCommand lightOff = new LightOffCommand(light);
+        StereoOffCommand stereoOff=new StereoOffCommand(stereo1);
+        TVOnCommand tvOn=new TVOnCommand(tv);
+        TVOffCommand tvOff = new TVOffCommand(tv);
+        HottubOffCOmmand hottubOff = new HottubOffCOmmand(hottub);
+        Command [] partyON={light1On,stereo1On,hottubOn, tvOn};
+        Command [] partyOff={lightOff,stereoOff,hottubOff, tvOff};
+        
+        MacroCOmmand partyONmacro=new MacroCOmmand(partyON);
+        MacroCOmmand partyOFFmacro=new MacroCOmmand(partyOff);
+        
+        remoteControl.setCommand(0, partyONmacro, partyOFFmacro);
+        
+        System.out.println(remoteControl);
+        System.out.println("Pushed Macro ON");
+        remoteControl.onButtonWasPushed(0);
+        System.out.println("Pushed Macro Off");
+        remoteControl.offButtonWasPushed(0);
+        
+        
     }   
 }

@@ -8,6 +8,6 @@ public class CommandKloster {
 
     
     public static void main(String[] args) {
-        // TODO code application logic here
+        RemoteLoader.main(args);
     }
 }
